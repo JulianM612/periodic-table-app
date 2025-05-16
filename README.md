@@ -20,6 +20,35 @@ An interactive periodic table application built with React, TypeScript, and Vite
 - Framer Motion
 - Zustand
 
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/JulianM612/periodic-table-app.git
+cd periodic-table-app
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+## Usage
+
+- Click on any element to view detailed information
+- Use the category filters to highlight specific element groups
+- Toggle temperature units between Kelvin, Celsius, and Fahrenheit
+- Search elements by name, symbol, or atomic number
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
