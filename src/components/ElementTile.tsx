@@ -16,12 +16,12 @@ export const ElementTile = ({ element, onClick }: ElementTileProps) => {
       whileTap={{ scale: 0.95 }}
       onClick={() => onClick(element)}
     >
-      <div className="text-xs text-right opacity-75">
+      <div className="text-xs text-right opacity-75 font-semibold">
         {element.atomicNumber}
       </div>
-      <div className="text-xl font-bold text-center">{element.symbol}</div>
-      <div className="text-xs text-center truncate">{element.name}</div>
-      <div className="text-xs text-center opacity-75">
+      <div className="text-xl font-bold text-center mt-1">{element.symbol}</div>
+      <div className="text-xs text-center truncate mt-1">{element.name}</div>
+      <div className="text-xs text-center opacity-75 mt-1 font-semibold">
         {element.atomicMass.toFixed(2)}
       </div>
     </motion.div>
@@ -31,24 +31,26 @@ export const ElementTile = ({ element, onClick }: ElementTileProps) => {
 const getCategoryColor = (category: ElementCategory): string => {
   switch (category) {
     case "alkali-metal":
-      return "bg-red-100 hover:bg-red-200";
+      return "bg-metal-alkali hover:bg-metal-alkali/80";
     case "alkaline-earth-metal":
-      return "bg-orange-100 hover:bg-orange-200";
+      return "bg-metal-alkaline-earth hover:bg-metal-alkaline-earth/80";
     case "transition-metal":
-      return "bg-yellow-100 hover:bg-yellow-200";
+      return "bg-metal-transition hover:bg-metal-transition/80";
     case "post-transition-metal":
-      return "bg-green-100 hover:bg-green-200";
+      return "bg-metal-post-transition hover:bg-metal-post-transition/80";
     case "metalloid":
-      return "bg-teal-100 hover:bg-teal-200";
+      return "bg-metalloid hover:bg-metalloid/80";
     case "nonmetal":
-      return "bg-blue-100 hover:bg-blue-200";
+      return "bg-nonmetal hover:bg-nonmetal/80";
     case "halogen":
-      return "bg-indigo-100 hover:bg-indigo-200";
+      return "bg-halogen hover:bg-halogen/80";
     case "noble-gas":
-      return "bg-purple-100 hover:bg-purple-200";
+      return "bg-noble-gas hover:bg-noble-gas/80";
     case "lanthanide":
-      return "bg-pink-100 hover:bg-pink-200";
+      return "bg-lanthanide hover:bg-lanthanide/80";
     case "actinide":
-      return "bg-rose-100 hover:bg-rose-200";
+      return "bg-actinide hover:bg-actinide/80";
+    default:
+      return "bg-gray-200 hover:bg-gray-300";
   }
 };
