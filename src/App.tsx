@@ -4,6 +4,7 @@ import { SearchBar } from "./components/SearchBar";
 import { FilterControls } from "./components/FilterControls";
 import { PeriodicTable } from "./components/PeriodicTable";
 import { ElementModal } from "./components/ElementModal";
+import TemperatureUnitSelector from "./components/TemperatureUnitSelector";
 import { useStore } from "./store/useStore";
 import "./App.css";
 
@@ -85,6 +86,8 @@ function App() {
             value={searchTerm}
             onChange={(value) => setSearchTerm(value)}
           />
+
+          <TemperatureUnitSelector />
 
           <FilterControls
             selectedCategory={selectedCategory as ElementCategory | null}
